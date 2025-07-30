@@ -51,7 +51,14 @@ class SecuelaSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'titulo',
+            'titulo_en',
+            'titulo_fr',
             'contenido',
+            'contenido_en',
+            'contenido_fr',
+            'mini_historia',
+            'mini_historia_en',
+            'mini_historia_fr',
             'imagen_fondo',
             'imagen_personaje',
             'personajes',   # ✅ Personajes relacionados
