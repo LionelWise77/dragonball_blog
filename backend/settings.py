@@ -18,7 +18,7 @@ _hosts_env = os.getenv("ALLOWED_HOSTS", "")
 if DEBUG:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = [h.strip() for h in _hosts_env.split(",") if h.strip()] or ["localhost", "127.0.0.1"]
+    ALLOWED_HOSTS = [h.strip() for h in _hosts_env.split(",") if h.strip()] or ["localhost", "127.0.0.1","tu-servicio>.onrender.com"]
 
 # ── Apps ───────────────────────────────────────────────────────────────────────
 INSTALLED_APPS = [
@@ -69,7 +69,7 @@ DATABASES = {
     "default": dj_database_url.parse(
         db_url,
         conn_max_age=600,
-        ssl_require=db_url.startswith("postgres://") or db_url.startswith("postgresql://"),
+        ssl_require=db_url.startswith("postgres://") or db_url.startswith("postgresql://dragonball_backend_db_user:bTMkxUObF8wEZyr5HFoyw3hmxct6fcb0@dpg-d2vf6nq4d50c73aa452g-a.frankfurt-postgres.render.com/dragonball_backend_db"),
     )
 }
 

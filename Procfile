@@ -1,1 +1,1 @@
-web: gunicorn dragonball_blog.wsgi --log-file -
+web: gunicorn dragonball_blog.wsgi
