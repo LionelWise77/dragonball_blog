@@ -49,11 +49,13 @@ MIDDLEWARE = [
 # ── CORS / CSRF ────────────────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://dragon-ball-react-psi.vercel.app",
+    "https://dragon-ball-react-psi.vercel.app"
+    "https://dragonball-backend.onrender.com",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "https://dragon-ball-react-psi.vercel.app",
+    "https://dragonball-backend.onrender.com"
     # Cuando tengas Render:
     # "https://<tu-backend>.onrender.com",
 ]

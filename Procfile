@@ -1,1 +1,1 @@
-web: gunicorn dragonball_blog.wsgi
+web: gunicorn backend.wsgi
