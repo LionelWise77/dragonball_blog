@@ -18,7 +18,7 @@ _hosts_env = os.getenv("ALLOWED_HOSTS", "")
 if DEBUG:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = [h.strip() for h in _hosts_env.split(",") if h.strip()] or ["localhost", "127.0.0.1","tu-servicio>.onrender.com"]
+    ALLOWED_HOSTS = [h.strip() for h in _hosts_env.split(",") if h.strip()] or ["localhost", "127.0.0.1","https://dragonball-backend.onrender.com"]
 
 # ── Apps ───────────────────────────────────────────────────────────────────────
 INSTALLED_APPS = [
@@ -49,13 +49,15 @@ MIDDLEWARE = [
 # ── CORS / CSRF ────────────────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://dragon-ball-react-psi.vercel.app"
+    "http://127.0.0.1:8000",
+    "https://dragon-ball-react-psi.vercel.app",
     "https://dragonball-backend.onrender.com",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
+    "http://127.0.0.1:8000",
     "https://dragon-ball-react-psi.vercel.app",
-    "https://dragonball-backend.onrender.com"
+    "https://dragonball-backend.onrender.com",
     # Cuando tengas Render:
     # "https://<tu-backend>.onrender.com",
 ]
